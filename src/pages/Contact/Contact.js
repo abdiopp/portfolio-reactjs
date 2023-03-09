@@ -1,16 +1,16 @@
-import React, { useState } from 'react'
-import { firestore } from '../../config/firebase'
-import { doc, serverTimestamp, setDoc } from "firebase/firestore";
+import React, { useRef, useState } from 'react'
+import emailjs from '@emailjs/browser';
 
 
 const initialState = {
-    fullName: '',
-    email: '',
+    user_name: '',
+    user_email: '',
     message: ''
 }
 
 export default function Contact() {
     const [isAdding, setIsAdding] = useState(false);
+    const form = useRef();
     const [formData, setFormData] = useState(initialState)
     const handleChange = (event) => {
         setFormData({
@@ -19,22 +19,24 @@ export default function Contact() {
         })
     }
 
-    const handleSubmit = async (event) => {
+    const sendEmail = (event) => {
         event.preventDefault()
-        let { fullName, email, message } = formData
 
-        fullName = fullName.trim();
-        email = email.trim();
+
+        let { user_name, user_email, message } = formData
+
+        user_name = user_name.trim();
+        user_email = user_email.trim();
         message = message.trim();
 
 
-        if (fullName.length < 3) {
+        if (user_name.length < 3) {
             window.toastify("Please Type Your Name Correctly", "error");
             return;
         }
 
-        if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email)) {
-            window.toastify("Invalid email address", "error");
+        if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(user_email)) {
+            window.toastify("Invalid user_email address", "error");
             return;
         }
 
@@ -43,41 +45,40 @@ export default function Contact() {
             return;
         }
 
-        let data = { fullName, email, message }
+        handleSubmit()
 
-
-        const id = Math.random().toString(36).slice(2)
-
-        data.id = id
-        data.dateCreated = serverTimestamp()
-
-
-        createDocument(data);
-    }
-    const createDocument = async (data) => {
-        setIsAdding(true)
-        try {
-            await setDoc(doc(firestore, "messages", data.id), data);
-            window.toastify("Message is sent", "success");
-        } catch (err) {
-            console.error(err)
-            window.toastify("Something went went wrong, Please try again", "error")
-        }
-        setIsAdding(false)
     }
 
+
+    const handleSubmit = () => {
+        setIsAdding(true);
+
+        emailjs.sendForm('default_service', 'template_w0g7lva', form.current, '6T4gP67ZgJ0_4f7bu')
+            .then((result) => {
+                window.toastify("Thank You! Your message is sent.", "success");
+
+            }, (error) => {
+                window.toastify("Something went wrong", "error");
+
+            });
+        setIsAdding(false);
+        form.current.reset();
+        // setTimeout
+        //     (function () {
+        //     }, 2000);
+    };
     return (
         <section className="section" id="contact">
             <div className="container text-center">
                 <p className="section-subtitle">How can you communicate?</p>
                 <h6 className="section-title mb-5">Contact Me</h6>
-                <form onSubmit={handleSubmit} className="contact-form col-md-10 col-lg-8 m-auto">
+                <form ref={form} onSubmit={sendEmail} className="contact-form col-md-10 col-lg-8 m-auto">
                     <div className="form-row row">
                         <div className="form-group col-6">
-                            <input type="text" size="50" className="form-control" placeholder="Your Name" name='fullName' onChange={handleChange} />
+                            <input type="text" size="50" className="form-control" placeholder="Your Name" name='user_name' onChange={handleChange} />
                         </div>
                         <div className="form-group col-6">
-                            <input type="email" className="form-control" placeholder="Enter Email" name='email' onChange={handleChange} />
+                            <input type="email" className="form-control" placeholder="Enter Email" name='user_email' onChange={handleChange} />
                         </div>
                         <div className="form-group col-sm-12 mt-3">
                             <textarea name="message" id="comment" rows="6" className="form-control"

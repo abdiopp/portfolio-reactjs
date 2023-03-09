@@ -1,8 +1,4 @@
 import React from 'react'
-import icon1 from '../../assets/img/chat-square-quote.svg'
-import icon2 from '../../assets/img/display.svg'
-import icon3 from '../../assets/img/brush.svg'
-import icon4 from '../../assets/img/code-slash.svg'
 
 export default function Services() {
     return (
@@ -14,7 +10,7 @@ export default function Services() {
                     <div className="col-md-6 col-lg-3">
                         <div className="service-card">
                             <div className="body">
-                                <img src={icon1}
+                                <img src="https://res.cloudinary.com/dtqdflngh/image/upload/v1678393691/chat-square-quote_y0dovo.svg"
                                     alt='Consult'
                                     className="icon" />
                                 <h6 className="title">CONSULTATION</h6>
@@ -25,7 +21,7 @@ export default function Services() {
                     <div className="col-md-6 col-lg-3">
                         <div className="service-card">
                             <div className="body">
-                                <img src={icon2}
+                                <img src='https://res.cloudinary.com/dtqdflngh/image/upload/v1678393691/display_zmulre.svg'
                                     alt='Web Design'
                                     className="icon" />
                                 <h6 className="title">Web design</h6>
@@ -36,7 +32,7 @@ export default function Services() {
                     <div className="col-md-6 col-lg-3">
                         <div className="service-card">
                             <div className="body">
-                                <img src={icon3}
+                                <img src='https://res.cloudinary.com/dtqdflngh/image/upload/v1678393691/brush_rqyuqn.svg'
                                     alt='Responsive Design'
                                     className="icon" />
                                 <h6 className="title">RESPONSIVE DESIGN</h6>
@@ -47,7 +43,7 @@ export default function Services() {
                     <div className="col-md-6 col-lg-3">
                         <div className="service-card">
                             <div className="body">
-                                <img src={icon4}
+                                <img src='https://res.cloudinary.com/dtqdflngh/image/upload/v1678393691/code-slash_bhilhd.svg'
                                     alt='Web Development'
                                     className="icon" />
                                 <h6 className="title">WEB DEVELOPMENT</h6>

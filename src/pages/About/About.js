@@ -1,5 +1,4 @@
 import React from 'react'
-import man from '../../assets/img/man.png'
 
 export default function About() {
     return (
@@ -8,7 +7,7 @@ export default function About() {
                 <div className="row">
                     <div className="about">
                         <div className="about-img-holder ">
-                            <img src={man} alt="About" className='about-img' />
+                            <img src='https://res.cloudinary.com/dtqdflngh/image/upload/v1678393695/man_qgmgeo.png' alt="About" className='about-img' />
                         </div>
                         <div className="about-caption  ">
                             <p className="section-subtitle">Who Am I ?</p>
