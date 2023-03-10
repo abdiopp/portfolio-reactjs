@@ -9,7 +9,7 @@ export default function Portfolio() {
                 <div className="row">
                     <div className="col-md-6">
                         <a href="https://moonriseuae.com/" className="portfolio-card">
-                            <img src='https://res.cloudinary.com/dtqdflngh/image/upload/v1678393694/folio-1_qvqit7.png' className="portfolio-card-img"
+                            <img src='https://res.cloudinary.com/dtqdflngh/image/upload/v1678485666/folio-1_qvqit7_yzm9lk.webp' className="portfolio-card-img"
                                 alt="Moonrise UAE" />
                             <span className="portfolio-card-overlay">
                                 <span className="portfolio-card-caption">
@@ -21,7 +21,7 @@ export default function Portfolio() {
                     </div>
                     <div className="col-md-6">
                         <a href="https://myeventapp-e6325.web.app/" className="portfolio-card">
-                            <img className="portfolio-card-img img-responsive rounded" src='https://res.cloudinary.com/dtqdflngh/image/upload/v1678393692/folio-2_znccwj.png'
+                            <img className="portfolio-card-img img-responsive rounded" src='https://res.cloudinary.com/dtqdflngh/image/upload/v1678485666/folio-2_znccwj_w0fd1q.webp'
                                 alt="Event App" />
                             <span className="portfolio-card-overlay">
                                 <span className="portfolio-card-caption">
