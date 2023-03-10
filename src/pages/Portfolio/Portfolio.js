@@ -10,7 +10,7 @@ export default function Portfolio() {
                     <div className="col-md-6">
                         <a href="https://moonriseuae.com/" className="portfolio-card">
                             <img src='https://res.cloudinary.com/dtqdflngh/image/upload/v1678393694/folio-1_qvqit7.png' className="portfolio-card-img"
-                                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page" />
+                                alt="Moonrise UAE" />
                             <span className="portfolio-card-overlay">
                                 <span className="portfolio-card-caption">
                                     <h4>Web Development</h4>
@@ -22,7 +22,7 @@ export default function Portfolio() {
                     <div className="col-md-6">
                         <a href="https://myeventapp-e6325.web.app/" className="portfolio-card">
                             <img className="portfolio-card-img img-responsive rounded" src='https://res.cloudinary.com/dtqdflngh/image/upload/v1678393692/folio-2_znccwj.png'
-                                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page" />
+                                alt="Event App" />
                             <span className="portfolio-card-overlay">
                                 <span className="portfolio-card-caption">
                                     <h4>Web Development</h4>

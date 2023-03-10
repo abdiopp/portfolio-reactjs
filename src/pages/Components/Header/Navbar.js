@@ -24,7 +24,7 @@ export default function Navbar() {
 
     return (
         <>
-            <nav className={scrolled ? "navbar navbar-sm bg-body-tertiary custom-navbar bg-dark py-0 navbar-dark" : "navbar navbar-sm bg-body-tertiary custom-navbar"}>
+            <nav className={scrolled ? "navbar navbar-sm bg-body-tertiary custom-navbar bg-dark p-0 m-0 navbar-dark" : "navbar navbar-sm bg-body-tertiary custom-navbar"}>
                 <div className="container">
                     <a href='#home' className="navbar-brand">
                         <img src='https://res.cloudinary.com/dtqdflngh/image/upload/v1678393692/logo_zk8ubf.png' alt="Abdi" className="img-fluid" width={50} />

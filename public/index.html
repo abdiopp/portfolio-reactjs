@@ -25,19 +25,32 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>Abdi's Portfolio</title>
+    <style>
+      .my-loader {
+    background-color: beige;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        background-image: url('https://res.cloudinary.com/dtqdflngh/image/upload/v1678479462/ezgif-2-73d6f7be59_s4cves.gif') ;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 90px;
+  }
+      .my-spinner{
+        width: 110px !important;
+        height: 110px !important;
+      }
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <div id="root">
+      <div class="my-loader">
+        <div class="spinner-border text-primary my-spinner" role="status"></div>
+      </div>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    </div>
+   
   </body>
 </html>
