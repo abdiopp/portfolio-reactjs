@@ -1,4 +1,5 @@
 import React from 'react'
+import cv from '../../assets/my CV.pdf'
 
 export default function About() {
     return (
@@ -15,6 +16,7 @@ export default function About() {
                             <p>
                                 I’m a Web developer adept at contributing to highly collaborative work environment and finding solutions.  Proven experience developing consumer-focused websites using HTML, CSS, ReactJS, JavaScript and GoogleFirebase.  Good knowledge of the best practices for web design, user experience, and speed.
                             </p>
+                            <a href={cv} className='btn-rounded btn btn-outline-primary mt-4'>Download CV</a>
                         </div>
                     </div>
                 </div>

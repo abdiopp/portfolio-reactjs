@@ -56,16 +56,12 @@ export default function Contact() {
         emailjs.sendForm('default_service', 'template_w0g7lva', form.current, '6T4gP67ZgJ0_4f7bu')
             .then((result) => {
                 window.toastify("Thank You! Your message is sent.", "success");
-
+                setIsAdding(false);
+                form.current.reset();
             }, (error) => {
                 window.toastify("Something went wrong", "error");
-
+                setIsAdding(false);
             });
-        setIsAdding(false);
-        form.current.reset();
-        // setTimeout
-        //     (function () {
-        //     }, 2000);
     };
     return (
         <section className="section" id="contact">
@@ -85,9 +81,9 @@ export default function Contact() {
                                 placeholder="Write Something" onChange={handleChange} />
                         </div>
                         <div className="form-group col-sm-12 mt-3">
-                            <input type="submit" disabled={setIsAdding} value={
-                                isAdding ? "Sending..." : "Send"
-                            } className="btn btn-outline-primary rounded" />
+                            <input type="submit" disabled={isAdding} value={isAdding ? "Sending..."
+                                : "Send Message"}
+                                className="btn w-25 btn-primary rounded" />
                         </div>
                     </div>
                 </form>
